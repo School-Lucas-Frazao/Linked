@@ -1,7 +1,7 @@
 
 public class LinkedIntList 
 {
-	ListNode front;
+	ListNode front = new ListNode();
 	
 	public LinkedIntList()
 	{
@@ -15,10 +15,13 @@ public class LinkedIntList
 	
 	public void add(int newValue)
 	{
-		ListNode temp = front;
+		ListNode New = new ListNode();
+		ListNode temp = new ListNode();
+		New.data = newValue;
+		temp = front;
 		if( front == null)
 		{
-			temp = new ListNode(newValue);
+			front = New;
 		}
 		else
 		{

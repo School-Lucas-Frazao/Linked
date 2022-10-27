@@ -16,7 +16,7 @@ public class LinkedListReplicated
 		//Students create 2 LinkedIntList objects.
     	
             LinkedIntList two = new LinkedIntList();
-    		LinkedIntList one = new LinkedIntList(1);
+    		LinkedIntList one = new LinkedIntList();
     	
 		
       	//Test out each of your various methods (add, insert, get, indexOf, remove, size, toString)) 
@@ -26,6 +26,7 @@ public class LinkedListReplicated
     		System.out.println(one.toString());
     		two.add(1);
     		System.out.println(two);
+    		System.out.println(two.size());
     }
     
 	//Create your LinkedIntList class in another file called "LinkedIntList"
