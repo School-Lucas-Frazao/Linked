@@ -126,9 +126,10 @@ public class LinkedIntList
 	{
 		String x = "";
 		ListNode temp = new ListNode();
+		temp = front;
 		while(temp != null)
 		{
-			x = x + temp.data;
+			x = x + temp.data + ",";
 			temp = temp.next;
 		}
 		return x;

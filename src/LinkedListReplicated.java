@@ -23,10 +23,11 @@ public class LinkedListReplicated
       	//using either of the instantiated LinkedIntList objects
     		
     		one.add(1);
+    		one.add(2);
+    		one.add(3);
+    		one.add(4);
+    		one.add(2,1);
     		System.out.println(one.toString());
-    		two.add(1);
-    		System.out.println(two);
-    		System.out.println(two.size());
     }
     
 	//Create your LinkedIntList class in another file called "LinkedIntList"
