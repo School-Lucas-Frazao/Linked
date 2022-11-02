@@ -19,11 +19,11 @@ public class LinkedIntList
 		ListNode temp = new ListNode();
 		New.data = newValue;
 		temp = front;
-		if( front == null)
+		if( front == null)//if list is empty
 		{
 			front = New;
 		}
-		else
+		else//if list is not empty
 		{
 			
 			while( temp.next != null)
@@ -37,90 +37,86 @@ public class LinkedIntList
 	
 	public void add(int index, int value)
 	{
+		if(index > size() || index < 0)
+		{
+			throw new IndexOutOfBoundsException();
+		}
+		ListNode Value = new ListNode(value);
 		int x = 0;
-		ListNode holder = front;
 		ListNode temp = front;
-		while ( x != index)
+		while ( x != index-1)
 		{
 			temp = temp.next;
-			holder = holder.next;
-			if( x == index)
-			{
-				holder.next = new ListNode(value);
-				holder.next = temp;
-			}
+			x++;
 		}
 		
-		front = holder;
-		
+		Value.next = temp.next;
+		temp.next = Value;
 	}
 	
-	public void get(int index)
+	public int get(int index)
 	{
+		if(index > size() || index < 0)
+		{
+			throw new IndexOutOfBoundsException();
+		}
 		int x = 0;
-		ListNode counter = front;
-		
+		ListNode temp = front;
 		while (x != index)
 		{
-			//counter.next;
+			temp = temp.next;
+			x++;
 		}
-		
-		System.out.println(counter.data);
+		return temp.data;
 	}
 	
-	public void indexOf(int value)
+	public int indexOf(int value)
 	{	
-		int index = 0;
-		while (front.next != null)
+		int x = 0;
+		ListNode temp = front;
+		while(temp.data != value)
 		{
-			front = front.next;
-			if (front.data == value)
-			{
-				System.out.println(index);
-			}
-			else
-			{
-				index++;
-			}
+			temp = temp.next;
+			x++;
 		}
+			return x;
+		
+		
 		
 	}
 	
 	public int remove(int index)
 	{
-		ListNode temp1 = new ListNode();
-		ListNode temp2 = new ListNode();
-		ListNode temp3 = new ListNode();
-		temp1 = front;
-		temp2 = front;
-		
-		
-		for(int x = 0; x < index; x++)
+		ListNode ret = new ListNode();
+		int x = 0;
+		ListNode temp = front;
+		while(x != index-1)
 		{
-			temp1 = temp1.next;
-			temp2 = temp1.next.next;
-			temp3 = temp3.next;
+			temp = temp.next;
+			x++;
+			ret = temp.next;
 			
 		}
+		temp.next = temp.next.next;
+		return ret.data;
 		
-		temp1.next = temp2;
-		front = temp1;
-		return temp3.data;
+		
 	}
 	
 	public int size()
 	{
-		int count = 0;
-		ListNode temp = new ListNode();
-		
+		int x = 1;
+		ListNode temp = front;
 		while(temp.next != null)
 		{
+			x++;
 			temp = temp.next;
-			count ++;
+			
 		}
+		return x;
 		
-		return count;
 	}
+
 	
 	public String toString()
 	{

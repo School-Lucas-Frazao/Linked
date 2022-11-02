@@ -22,12 +22,23 @@ public class LinkedListReplicated
       	//Test out each of your various methods (add, insert, get, indexOf, remove, size, toString)) 
       	//using either of the instantiated LinkedIntList objects
     		
+    		
     		one.add(1);
     		one.add(2);
     		one.add(3);
     		one.add(4);
-    		one.add(2,1);
+    		one.add(5);
+    		one.add(1, 3);
+    		System.out.println(one.get(3));
+    		System.out.println(one.indexOf(5));
     		System.out.println(one.toString());
+    		System.out.println(one.remove(3));
+    		System.out.println(one);
+    		System.out.println(one.size());
+    		
+    		one.add(1);
+    		System.out.println(one);
+    		
     }
     
 	//Create your LinkedIntList class in another file called "LinkedIntList"
