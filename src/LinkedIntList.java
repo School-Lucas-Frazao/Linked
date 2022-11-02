@@ -72,6 +72,7 @@ public class LinkedIntList
 	
 	public int indexOf(int value)
 	{	
+		
 		int x = 0;
 		ListNode temp = front;
 		while(temp.data != value)
@@ -79,7 +80,16 @@ public class LinkedIntList
 			temp = temp.next;
 			x++;
 		}
+		if (x == 0)
+		{
+			return -1;
+		}
+		else
+		{
 			return x;
+		}
+			
+		
 		
 		
 		
@@ -87,8 +97,12 @@ public class LinkedIntList
 	
 	public int remove(int index)
 	{
-		ListNode ret = new ListNode();
+		if(index > size() || index < 0)
+		{
+			throw new IndexOutOfBoundsException();
+		}
 		int x = 0;
+		ListNode ret = new ListNode();
 		ListNode temp = front;
 		while(x != index-1)
 		{
