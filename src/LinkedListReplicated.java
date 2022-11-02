@@ -24,6 +24,7 @@ public class LinkedListReplicated
     		
     		
     		one.add(1);
+    		/*
     		one.add(2);
     		one.add(3);
     		one.add(4);
@@ -35,8 +36,8 @@ public class LinkedListReplicated
     		System.out.println(one.remove(3));
     		System.out.println(one);
     		System.out.println(one.size());
-    		
     		one.add(1);
+    		*/
     		System.out.println(one);
     		
     }

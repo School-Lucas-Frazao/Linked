@@ -1,4 +1,4 @@
-
+//Lucas Frazao, 7th period, method will manipulate nodes
 public class LinkedIntList 
 {
 	ListNode front = new ListNode();
