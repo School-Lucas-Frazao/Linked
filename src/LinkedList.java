@@ -1,16 +1,16 @@
-//Lucas Frazao, 7th period, file will be called on to manipulate nodes, LinkedIntList
+//LinkedList, Lucas Frazao, This file will accept any node data type and manipulate the nodes
 
-public class LinkedIntList <T>
+public class LinkedList <T>
 {
 	
 	ListNode<T> front = new ListNode<T>();
 	
-	public LinkedIntList()
+	public LinkedList()
 	{
 		front = null;//sets front to null
 	}
 
-	public LinkedIntList(T t) 
+	public LinkedList(T t) 
 	{
 		front = new ListNode<T>(t);//sets front to a listnode
 	}
@@ -67,7 +67,7 @@ public class LinkedIntList <T>
 	
 	public T get(int index)
 	{
-		if(index > size() || index < 0)
+		if(index >= size() || index < 0)
 		{
 			throw new IndexOutOfBoundsException();//if index given is not good
 		}
@@ -138,12 +138,13 @@ public class LinkedIntList <T>
 	
 	public int size()
 	{
-		int x = 1;//starts at one because it will count the size
+		int x = 0;//starts at one because it will count the size
 		ListNode<T> temp = front;
 		while(temp != null)
 		{
-			x++;
+			
 			temp = temp.next;
+			x++;
 			
 		}
 		return x;
@@ -170,46 +171,5 @@ public class LinkedIntList <T>
 		ListNode<T> Clear = new ListNode<T>();//makes a null node
 		front = Clear; //sets front to null node
 	}
-	
-	/*
-	
-	public void sort()//sorts the list
-	{
-		 // Node current will point to head
-        ListNode<T> current = front;
-        ListNode<T> index = null;
- 
-        int temp;
- 
-        if (front == null) {
-            return;
-        }
-        else {
-            while (current != null) {
-                // Node index will point to node next to
-                // current
-                index = current.next;
- 
-                while (index != null) {
-                    // If current node's data is greater
-                    // than index's node data, swap the data
-                    // between them
-                    if (current.data > index.data) {
-                        temp = current.data;
-                        current.data = index.data;
-                        index.data = temp;
-                    }
- 
-                    index = index.next;
-                }
-                current = current.next;
-            }
-        }
-		
-	}
-	
-	*/
-	
-	
-	
 }
+

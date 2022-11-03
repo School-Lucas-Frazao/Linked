@@ -3,22 +3,24 @@
  */
 
 
-public class ListNode {
+public class ListNode<T> {
 
-    int data;
-    ListNode next;
+     T data;
+    ListNode<T> next;
 
     public ListNode()
     {
-        this(0, null);
+    	data = null;
+    	next = null;
     }
     
-    public ListNode(int data)
+    public ListNode(T data)
     {
-    	this(data, null);
+    	this.data = data;
+    	next = null;
     }
     
-    public ListNode(int data, ListNode next)
+    public ListNode(T data, ListNode<T> next)
     {
     	this.data = data;
     	this.next = next;
