@@ -1,6 +1,9 @@
 //Lucas Frazao, 7th period, file will be called on to manipulate nodes, LinkedIntList
-public class LinkedIntList 
+
+public class LinkedIntList <T>
 {
+	private T t;
+	
 	ListNode front = new ListNode();
 	
 	public LinkedIntList()
@@ -8,16 +11,16 @@ public class LinkedIntList
 		front = null;//sets front to null
 	}
 
-	public LinkedIntList(int value) 
+	public LinkedIntList(T t) 
 	{
-		front = new ListNode(value);//sets front to a listnode
+		front = new ListNode(t);//sets front to a listnode
 	}
 	
-	public void add(int newValue)
+	public void add(T t)
 	{
 		ListNode New = new ListNode();//makes the listnode nw
 		ListNode temp = new ListNode();//sets temp to listnode new
-		New.data = newValue;//sets the data in new equal to the parameter
+		New.data = t;//sets the data in new equal to the parameter
 		temp = front;//sets temp equal to front
 		if( front == null)//if list is empty
 		{
