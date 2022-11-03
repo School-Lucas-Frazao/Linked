@@ -37,21 +37,33 @@ public class LinkedIntList
 	
 	public void add(int index, int value)
 	{
+		ListNode Value = new ListNode(value);
+		int x = 0;
+		ListNode temp = front;
 		if(index > size() || index < 0)
 		{
 			throw new IndexOutOfBoundsException();
 		}
-		ListNode Value = new ListNode(value);
-		int x = 0;
-		ListNode temp = front;
-		while ( x != index-1)
-		{
-			temp = temp.next;
-			x++;
-		}
 		
-		Value.next = temp.next;
-		temp.next = Value;
+		if(index == 0)
+		{
+			
+		}
+		else
+		{
+			while ( x != index-1)
+			{
+				temp = temp.next;
+				x++;
+			}
+			
+			Value.next = temp.next;
+			temp.next = Value;
+			
+		}
+
+		
+
 	}
 	
 	public int get(int index)
