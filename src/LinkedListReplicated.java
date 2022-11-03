@@ -24,7 +24,6 @@ public class LinkedListReplicated
     		
     		
     		one.add(1);
-    		
     		one.add(2);
     		one.add(3);
     		one.add(4);
@@ -37,9 +36,22 @@ public class LinkedListReplicated
     		System.out.println(one);
     		System.out.println(one.size());
     		one.add(1);
-    		
     		System.out.println(one);
     		
+    		
+    		
+    		one.add(1);
+    		one.add(2);
+    		one.add(0,0);
+    		System.out.println(one);
+    		System.out.println(one.indexOf(1));
+    		one.add(3);
+    		one.add(4);
+    		System.out.println(one);
+    		System.out.println(one.remove(0));
+    		System.out.println(one.remove(0));
+    		System.out.println(one.remove(1));
+    		System.out.println(one);
     }
     
 	//Create your LinkedIntList class in another file called "LinkedIntList"
