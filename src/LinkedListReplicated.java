@@ -1,5 +1,6 @@
 /*
- * LinkedListReplicated.java
+ * LinkedListReplicated.java, Lucas Frazao, Period 7, file will serve to test all methods in
+ * LinkedIntList.java
  * 
  */
 
@@ -22,7 +23,7 @@ public class LinkedListReplicated
       	//Test out each of your various methods (add, insert, get, indexOf, remove, size, toString)) 
       	//using either of the instantiated LinkedIntList objects
     		
-    		
+    		/*
     		one.add(1);
     		one.add(2);
     		one.add(3);
@@ -37,7 +38,7 @@ public class LinkedListReplicated
     		System.out.println(one.size());
     		one.add(1);
     		System.out.println(one);
-    		
+    		*/
     		
     		
     		one.add(1);
@@ -52,6 +53,15 @@ public class LinkedListReplicated
     		System.out.println(one.remove(0));
     		System.out.println(one.remove(1));
     		System.out.println(one);
+    		one.clear();
+    		System.out.println(one);
+    		
+    		two.add(1);
+    		two.add(3);
+    		two.add(0);
+    		System.out.println(two);
+    		two.sort();
+    		System.out.println(two);
     }
     
 	//Create your LinkedIntList class in another file called "LinkedIntList"
