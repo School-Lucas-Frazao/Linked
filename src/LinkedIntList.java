@@ -1,4 +1,4 @@
-//Lucas Frazao, 7th period, method will manipulate nodes
+//Lucas Frazao, 7th period, file will be called on to manipulate nodes, LinkedIntList
 public class LinkedIntList 
 {
 	ListNode front = new ListNode();
@@ -169,7 +169,7 @@ public class LinkedIntList
 		front = Clear; //sets front to null node
 	}
 	
-	public void sort()
+	public void sort()//sorts the list
 	{
 		 // Node current will point to head
         ListNode current = front;
